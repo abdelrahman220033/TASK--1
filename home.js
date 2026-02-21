@@ -42,19 +42,31 @@ function createRocket() {
     rocket.textContent = '🚀';
 
     
+   
     const wrapperRect = wrapper.getBoundingClientRect();
     const containerRect = document.querySelector('.container').getBoundingClientRect();
 
     
+
+   
     const baseLeft = wrapperRect.left - containerRect.left + wrapperRect.width / 2;
+    
     const baseTop = wrapperRect.top - containerRect.top + wrapperRect.height / 2;
 
     
+
+
       const offsetY = (Math.random() - 0.5) * 80;
+
+
+
 
     rocket.style.left = `${baseLeft + offsetX}px`;
     rocket.style.bottom = `${window.innerHeight - (baseTop + offsetY)}px`;
     
+
+
+
     const dx = (Math.random() - 0.5) * 300; 
     const dy = (Math.random() * 200 + 100); 
     rocket.style.setProperty('--dx', dx + 'px');
@@ -65,11 +77,23 @@ function createRocket() {
     rocket.style.animationDuration = duration + 's';
 
   
+
+
+
+
+
+
+
+
+
+
     rocket.style.animationDelay = Math.random() * 0.2 + 's';
 
     wrapper.appendChild(rocket);
 
     
+
+
     setTimeout(() => {
         if (rocket.parentNode) rocket.remove();
     }, duration * 1000 + 300);
