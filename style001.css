@@ -1,0 +1,109 @@
+body {
+    font-family: 'Baloo 2', cursive;
+    background: linear-gradient(to top, #87CEEB, #E0F7FF);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 850px;
+    background: linear-gradient(145deg, #ffffff, #e6f7ff);
+    border-radius: 80px 20px 80px 20px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 5px solid #6C5CE7;
+    position: relative;
+    overflow: hidden;
+}
+h1 {
+    color:#FF6B6B;
+    text-shadow: 3px 3px #ffd700;
+    font-size: 3.5em;
+    margin-top: 0;
+    text-align: center;
+}
+h2 {
+    color:  #6C5CE7;
+    font-size: 2.5em;
+    border-left: 10px solid #ffa07a;
+    padding-left: 20px;
+}
+p, li {
+    font-size: 1.9em;
+    line-height: 1.5;
+    color: #2f4f4f;
+}
+ul {
+    list-style-type: '🚀  ';
+}
+li {
+    margin-bottom: 10px;
+}
+.button-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    min-height: 100px;
+}
+button {
+    background: linear-gradient(to right, #6C5CE7, #00CEC9);
+    color: white;
+    padding: 20px 60px;
+    font-size: 1.8em;
+    border-radius: 50px 50px 20px 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    font-family: inherit;
+    position: relative;
+    z-index: 10;
+    background-color: #c9be1b; 
+}
+
+
+button::before {
+    content: "🚀 ";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+.rocket {
+    position: absolute;
+    font-size: 2.5em;
+    pointer-events: none;
+    z-index: 5;
+    animation: flyRocket 0.9s ease-out forwards;
+    bottom: 0;
+    left: 50%;
+}
+@keyframes flyRocket {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-200px - var(--dy))) scale(1.5);
+    }
+}
+#factDisplay {
+    background-color: #fffacd;
+    border-radius: 40px;
+    padding: 30px;
+    font-size: 2em;
+    border: 6px dashed #ff69b4;
+    text-align: center;
+    color: #8b4513;
+}
