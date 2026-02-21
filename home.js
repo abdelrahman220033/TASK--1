@@ -61,10 +61,11 @@ function createRocket() {
 
 
 
-    rocket.style.left = `${baseLeft + offsetX}px`;
-    rocket.style.bottom = `${window.innerHeight - (baseTop + offsetY)}px`;
-    
-
+    rocket.style.left = '50%';
+    rocket.style.top = '50%';
+    rocket.style.transform = 'translate(-50%, -50%)';
+        
+ 
 
 
     const dx = (Math.random() - 0.5) * 300; 
