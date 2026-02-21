@@ -55,7 +55,7 @@ function createRocket() {
 
     
 
-
+      const offsetX = (Math.random() - 0.5) * 150;
       const offsetY = (Math.random() - 0.5) * 80;
 
 
