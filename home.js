@@ -63,9 +63,8 @@ function createRocket() {
 
     rocket.style.left = '50%';
     rocket.style.top = '50%';
-    rocket.style.transform = 'translate(-50%, -50%)';
-        
- 
+    rocket.style.transform = 'translate(-50%, 0)';
+    
 
 
     const dx = (Math.random() - 0.5) * 300; 

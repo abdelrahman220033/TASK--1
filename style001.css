@@ -85,17 +85,16 @@ button:hover {
     pointer-events: none;
     z-index: 5;
     animation: flyRocket 0.9s ease-out forwards;
-    bottom: 0;
-    left: 50%;
 }
+
 @keyframes flyRocket {
-    0% {
+    from {
         opacity: 1;
         transform: translate(-50%, 0) scale(0.8);
     }
-    100% {
+    to {
         opacity: 0;
-        transform: translate(calc(-50% + var(--dx)), calc(-200px - var(--dy))) scale(1.5);
+        transform: translate(var(--dx), calc(-1 * var(--dy))) scale(1.5);
     }
 }
 #factDisplay {
